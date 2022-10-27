@@ -1,4 +1,3 @@
-
 package com.example.tnteam;
 import static android.content.Context.NOTIFICATION_SERVICE;
 
@@ -67,5 +66,4 @@ public class InsertAgencyFragment extends Fragment{
         });
         return view;
     }
-
 }

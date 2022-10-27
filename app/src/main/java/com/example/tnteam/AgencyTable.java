@@ -1,4 +1,3 @@
-
 package com.example.tnteam;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity; //gia na oristei i class afti os pinakas
