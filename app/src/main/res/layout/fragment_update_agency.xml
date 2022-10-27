@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width= "match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UpdateAgencyFragment">
+
+    //update SAILOR textview
+
+    <TextView
+        android:id="@+id/AgencyUpdateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="24dp"
+        android:text="UPDATE AGENCY"
+        android:textAlignment="center"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+    // insert ID
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/AgencyUpdateEditText1"
+            android:layout_width="215dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="80dp"
+            android:backgroundTint="@color/white"
+            android:hint="insert ID"
+            android:inputType="number"
+            android:textSize="13dp"
+            tools:ignore="TouchTargetSizeCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+    // Insert Person name"
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/AgencyUpdateEditText2"
+            android:layout_width="215dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="80dp"
+            android:backgroundTint="@color/white"
+            android:ems="10"
+            android:hint="Insert name"
+            android:inputType="textPersonName"
+            android:textSize="13dp"
+            tools:ignore="TouchTargetSizeCheck" /> />
+    </com.google.android.material.textfield.TextInputLayout>
+    // Insert rating sailor
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/AgencyUpdateEditText3"
+            android:layout_width="215dp"
+            android:layout_height="55dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="80dp"
+            android:backgroundTint="@color/white"
+            android:ems="10"
+            android:hint="Insert address"
+            android:textSize="13dp"
+            tools:ignore="TouchTargetSizeCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+    // Insert age
+
+    <Button
+        android:id="@+id/AgencyUpdateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:backgroundTint="@color/lightblue"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        />
+
+</LinearLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <include
+                layout="@layout/toolbar_layout"
+                android:backgroundTint="#2196F3"></include>
+
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                /* Agency_login_text */
+                <TextView
+                    android:id="@+id/agency_login_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="30dp"
+                    android:text="Login Travel Agency"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
+
+                /* Agency_inputs */
+
+                /*agency_login_button*/
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp">
+
+                    /*agency_insert_name*/
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        /*agency_insert_name*/
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/agency_login_name"
+                            android:layout_width="215dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="80dp"
+                            android:layout_marginTop="50dp"
+                            android:layout_marginEnd="80dp"
+                            android:backgroundTint="@color/white"
+                            android:hint="Name"
+                            android:inputType="textPersonName"
+                            android:textSize="12dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    /*agency_insert_address*/
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp">
+                        /*agency_insert_address*/
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/agency_login_address"
+                            android:layout_width="215dp"
+                            android:layout_height="50dp"
+                            android:layout_marginStart="80dp"
+                            android:layout_marginTop="50dp"
+                            android:layout_marginEnd="80dp"
+                            android:backgroundTint="#FFFFFF"
+                            android:hint="Address"
+
+                            android:textSize="12dp" />/*agency_insert_address*/
+                    </com.google.android.material.textfield.TextInputLayout>
+                    /*agency_insert_id*/
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/agency_login_id"
+                        android:layout_width="215dp"
+                        android:layout_height="50dp"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginTop="1dp"
+                        android:layout_marginEnd="80dp"
+                        android:backgroundTint="#FFFFFF"
+                        android:hint="Id"
+                        android:inputType="number"
+                        android:textSize="12dp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/agency_login_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="140dp"
+                    android:layout_marginTop="450dp"
+                    android:backgroundTint="@color/lightblue"
+                    android:text="Login"
+                    android:onClick="loginAgency"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/navigationView"
+        android:layout_gravity="start"
+        app:menu="@menu/login_menu">
+    </com.google.android.material.navigation.NavigationView>
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
