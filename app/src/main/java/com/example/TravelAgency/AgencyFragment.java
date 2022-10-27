@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.TravelAgency.R;
+import com.example.tnteam.R;
 
 public class AgencyFragment extends Fragment implements View.OnClickListener {
 

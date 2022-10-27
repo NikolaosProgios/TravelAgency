@@ -19,7 +19,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.example.TravelAgency.R;
+import com.example.tnteam.R;
 import com.google.android.material.navigation.NavigationView;
 
 public class AgencyActivity extends AppCompatActivity {

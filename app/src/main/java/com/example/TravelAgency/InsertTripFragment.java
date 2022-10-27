@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 
-import com.example.TravelAgency.R;
+import com.example.tnteam.R;
 
 public class InsertTripFragment extends Fragment{
     EditText editText1, editText2, editText3,editText4,editText5;    Button insert_trip_Bn;

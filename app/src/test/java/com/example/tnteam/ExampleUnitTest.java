@@ -1,4 +1,4 @@
-package com.example.TravelAgency;
+package com.example.tnteam;
 
 import org.junit.Test;
 
