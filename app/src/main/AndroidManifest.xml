@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.tnteam">
+    package="com.example.TravelAgency">
 
     <uses-permission
         android:name="android.permission.ACCESS_FINE_LOCATION"
@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TNTeam">
         <activity
-            android:name=".NoficationActivity"
+            android:name="com.example.TravelAgency.NoficationActivity"
             android:exported="false" />
 
         <meta-data
@@ -37,10 +37,10 @@
             android:value="AIzaSyByy2fevfCORor66h-Z-gl3neIa5EwC4-0" />
 
         <activity
-            android:name=".AgencyActivity"
+            android:name="com.example.TravelAgency.AgencyActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.TravelAgency.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
