@@ -8,7 +8,7 @@ import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.tnteam.R;
+import com.example.TravelAgency.R;
 
 public class menuFragment extends Fragment implements View.OnClickListener {
 

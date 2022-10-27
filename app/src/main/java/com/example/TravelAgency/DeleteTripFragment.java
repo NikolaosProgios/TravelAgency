@@ -8,7 +8,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 
-import com.example.tnteam.R;
+import com.example.TravelAgency.R;
 
 public class DeleteTripFragment extends Fragment {
     EditText editText;

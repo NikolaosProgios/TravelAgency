@@ -4,7 +4,7 @@ package com.example.TravelAgency;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.example.tnteam.R;
+import com.example.TravelAgency.R;
 
 public class sharedPreferenceConfig {
     SharedPreferences sharedPreferences;

@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.tnteam.R;
+import com.example.TravelAgency.R;
 
 public class DeleteTripPackageFragment extends Fragment {
     EditText editText1;    Button button;

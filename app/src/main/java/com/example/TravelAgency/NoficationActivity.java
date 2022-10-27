@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.tnteam.R;
+import com.example.TravelAgency.R;
 
 public class NoficationActivity extends AppCompatActivity {
 

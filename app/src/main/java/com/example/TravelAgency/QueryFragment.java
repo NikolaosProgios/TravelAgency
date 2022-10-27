@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
-import com.example.tnteam.R;
+import com.example.TravelAgency.R;
 
 import java.util.List;
 
