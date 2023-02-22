@@ -1,6 +1,6 @@
 plugins {
-    id 'com.android.application'
     id 'com.google.gms.google-services'
+    id 'com.android.application'
     id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
 }
 
@@ -12,7 +12,7 @@ android {
         minSdk 28
         targetSdk 32
         versionCode 1
-        versionName "1.0"
+        versionName "3.08.01"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

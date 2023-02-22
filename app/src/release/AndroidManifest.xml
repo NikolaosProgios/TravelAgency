@@ -2,7 +2,7 @@
 
     <application>
         <activity
-            android:name="com.MyApp.TravelAgency.Print"
+            android:name="com.myapp.travelagency.Print"
             android:exported="false"
 
             />

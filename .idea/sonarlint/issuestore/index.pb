@@ -27,16 +27,8 @@ F
 app/proguard-rules.pro,9\e\9e08934d811afe28fbc77aaa3c0d747b94348db9
 P
  app/release/output-metadata.json,0\7\079ee2b81fdfd2faf349bcf552fe1a1bc16be431
-b
-2app/src/release/java/com/example/tnteam/Print.java,7\8\78af3928c712e3c637011d23506d6cae27e0afbf
-r
-Bmylibrary/src/test/java/com/example/mylibrary/ExampleUnitTest.java,3\4\349e51e6617543a12919ca0b6667b1d3a7ee209f
-Å
-Qmylibrary/src/androidTest/java/com/example/mylibrary/ExampleInstrumentedTest.java,5\1\51cc87b42e5a9766961a320b7b885ae63d38c53d
 ]
 -app/src/release/res/layout/activity_print.xml,5\f\5f524f8d9acd1e47bc62b6ece939c5b1fec4a026
-S
-#app/src/release/AndroidManifest.xml,d\2\d249a0f8e24c75f5751ad820323d9b486492828b
 V
 &mylibrary/src/main/AndroidManifest.xml,9\6\96b1da1bcfd41bc2b1d4c1e14de318643546d7c9
 |
@@ -45,10 +37,6 @@ m
 =app/src/test/java/com/MyApp/TravelAgency/ExampleUnitTest.java,4\6\46cc9e8ec6214e8c0110cf5b1779c04f70408150
 V
 &app/src/release/res/values/strings.xml,5\7\573b4e0ac98d1c31aec7d2b1817c62f76fecce3f
-<
-build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
-@
-app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302

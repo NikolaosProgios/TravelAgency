@@ -1,4 +1,4 @@
-package com.myapp.mylibrary;
+package com.myapp.travelagency;
 
 import org.junit.Test;
 
