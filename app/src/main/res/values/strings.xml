@@ -1,0 +1,46 @@
+<resources>
+
+    <string name="app_name"> Hi  😀</string>
+
+    <!-- Login -->
+    <string name="agency_id">1007</string>
+    <string name="agency_name">Sean Connery</string>
+    <string name="agency_address">IHU, Alexander Campus</string>
+    <string name="login_perference">
+        TNTeam.loginaoosharedPreferences_loginPrederence</string>
+    <string name="login_status">TNTeam.loginaoosharedPreferences_loginStatus</string>
+
+    <string-array name="queries_array">
+
+        <item> Query 1 </item>
+        <item> Query 2 </item>
+        <item> Query 3 </item>
+        <item> Query 4 </item>
+        <item> Query 5 </item>
+        <item> Query 6 </item>
+        <item> Query 7 </item>
+        <item> Query 8 </item>
+        <item> Query 9 </item>
+        <item> Query 10</item>
+        <item> Query 11</item>
+
+    </string-array>
+
+    <string-array name="queries_description_array">
+
+        <item> 1. Εμφάνισε τον πίνακα Agency.</item>
+        <item> 2. Εμφάνισε tov πίνακα Trip.</item>
+        <item> 3. Εμφάνισε τov πίνακα Trip Package.</item>
+        <item> 4. Εμφανίστε τo όνομα και τις διευθύνσεις των πρακτορείων. </item>
+        <item> 5. Εμφάνισε όλες τις πόλεις της Ελλάδος που καλύπτονται απο τα πρακτορία μας.</item>
+        <item> 6. Εμφανίστε τις πόλεις και τις χώρες που εχουν ημερήσιες εκδρομές .</item>
+        <item> 7. Εμφανίστε τις πόλεις απο κρουαζίερες διάρκειας πάνω απο τις 3 μέρες.</item>
+        <item> 8. Εμφανίστε τα id των πακτετων εκδρομών που έχουν τιμή πάνω απο 70$.</item>
+        <item> 9. Εμφανίστε τον κωδικο πακέτου εκδρομής,την πόλη εκδρομής, οπου περιλαμβάνουν Χριστούγεννα και πρωτοχρονιά.</item>
+        <item> 10.Εμφανίστε τα ονόματα πρακτορίων που βρήσκοκνται στο κέντρο. </item>
+        <item> 11.Εμφανίστε τα ονόματα των πρακτωρίων και την τιμη των ημερίσιων εκδρομών που υπάρχουν για Νάυπλιο το 15Αυγουστο 2022.</item>
+
+    </string-array>
+    <string name="hello_blank_fragment">Hello :) </string>
+
+</resources>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/profil"
+            android:icon="@drawable/account"
+            android:title="Profil"/>
+
+        <item
+            android:id="@+id/location"
+            android:icon="@drawable/location"
+            android:title="Location"/>
+
+        <item
+            android:id="@+id/edit"
+            android:icon="@drawable/edit"
+            android:title="Edit Tables"/>
+
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/logout"
+            android:title="Logout"/>
+
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/about"
+            android:title="About"/>
+
+        <item
+            android:id="@+id/exit"
+            android:icon="@drawable/exit_to_app"
+            android:title="Exit"/>
+
+    </group>
+</menu>

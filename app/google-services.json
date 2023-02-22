@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "254467585300",
+    "firebase_url": "https://tnteam-85664-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "tnteam-85664",
+    "storage_bucket": "tnteam-85664.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254467585300:android:080a4537dc2fd08f99fe01",
+        "android_client_info": {
+          "package_name": "com.example.tnteam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "254467585300-eemgp4a0i8o4cge0eh3rrijit3kn94el.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgClVMdLI4ueZ4yCpzbIFIvVxjqmkh0uE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "254467585300-eemgp4a0i8o4cge0eh3rrijit3kn94el.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
