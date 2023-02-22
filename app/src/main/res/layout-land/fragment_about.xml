@@ -1,42 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app= "http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas. android.com/tools"
     xmlns:tools2="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AboutFragment"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    tools:context=".AboutFragment">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="380dp"
-            android:layout_height="match_parent" >
-
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/imageView"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="90dp"
                 android:layout_width="170dp"
                 android:layout_height="60dp"
-                app:srcCompat="@drawable/ihu_large">
-            </ImageView>
+                android:layout_marginLeft="90dp"
+                android:layout_marginTop="15dp"
+                app:srcCompat="@drawable/ihu_large"></ImageView>
 
             <TextView
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="50dp"
-                android:text="   Το Αλεξάνδρειο Ανώτατο Τεχνολογικό Εκπαιδευτικό Ίδρυμα της Σίνδου στην Θεσσαλονίκη, με έτος ίδρυσης το 1970 , πλέον βρίσκεται υπο την αιγίδα του Διεθνούς Πανεπιστιμίου της Ελλάδος έχοντας το όνομα, Αλεξάνδρεια Πανεπιστημιούπολη. \n Ενα απο τα διακεκριμένα τμηματα, στον ιδωτικο εργασιακό κλάδο καθως και στον δημόσιο, είναι το τμήμα Μηχανικών Πληροφορικής!"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-
-
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="30dp"
+                android:text="   Το Αλεξάνδρειο Ανώτατο Τεχνολογικό Εκπαιδευτικό Ίδρυμα της Σίνδου στην Θεσσαλονίκη, με έτος ίδρυσης το 1970 , πλέον βρίσκεται υπο την αιγίδα του Διεθνούς Πανεπιστιμίου της Ελλάδος έχοντας το όνομα, Αλεξάνδρεια Πανεπιστημιούπολη. \n Ενα απο τα διακεκριμένα τμηματα, στον ιδωτικο εργασιακό κλάδο καθως και στον δημόσιο, είναι το τμήμα Μηχανικών Πληροφορικής!">
             </TextView>
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -46,6 +39,7 @@
             android:layout_width="470dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="380dp">
+
             <TextView
                 android:id="@+id/AboutUsText"
                 android:layout_width="330dp"
@@ -57,23 +51,17 @@
                 android:textColor="@color/myorange"
                 android:textSize="19sp"
                 android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/AboutUsInfo"
                 android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:text="   Στα πλαίσια του μαθήματος, Προηγμένα Θέματα Αλληλεπίδρασης (Προγραμματισμός Κινητών Συσκευών), πραγματοποιήθηκε η εκπνόηση της συγκεκριμένης εργασίας, με θέμα να είναι σχετική με εκδρομές.\n\n \n   *Πρόγιος Νικόλαος   - it175002 \n \n\n H τρέχουσα εκδοση εφαρμογής είναι η v.3.08.00 "
-                android:layout_marginTop="20dp"
                 android:layout_marginLeft="80dp"
-                android:textSize="15sp"/>
-
+                android:layout_marginTop="20dp"
+                android:text="   Στα πλαίσια του μαθήματος, Προηγμένα Θέματα Αλληλεπίδρασης (Προγραμματισμός Κινητών Συσκευών), πραγματοποιήθηκε η εκπνόηση της συγκεκριμένης εργασίας, με θέμα να είναι σχετική με εκδρομές.\n\n \n   *Πρόγιος Νικόλαος   - it175002 \n \n\n H τρέχουσα εκδοση εφαρμογής είναι η v.3.08.00 "
+                android:textSize="15sp" />
 
 
         </com.google.android.material.textfield.TextInputLayout>
-
-
-
-
     </FrameLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

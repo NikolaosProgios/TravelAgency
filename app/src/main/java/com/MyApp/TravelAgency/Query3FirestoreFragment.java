@@ -1,5 +1,5 @@
-
 package com.MyApp.TravelAgency;
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -21,7 +21,8 @@ public class Query3FirestoreFragment extends Fragment {
 
     TextView queryTextResult;
 
-    public Query3FirestoreFragment() {    }
+    public Query3FirestoreFragment() {
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -33,8 +34,8 @@ public class Query3FirestoreFragment extends Fragment {
         collectionReference.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                String result="";
-                for (QueryDocumentSnapshot documentSnapshot:queryDocumentSnapshots) {
+                String result = "";
+                for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
                     Clients clients = documentSnapshot.toObject(Clients.class);
                     Integer id = clients.getId();
                     String name = clients.getName();
@@ -48,7 +49,7 @@ public class Query3FirestoreFragment extends Fragment {
                             "\n hotel: " + hotel +
                             "\n package_id: " + package_id + "\n\n";
                 }
-                    queryTextResult.setText(result);
+                queryTextResult.setText(result);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override

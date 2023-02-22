@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width= "match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".UpdateAgencyFragment">
-
-    //update SAILOR textview
 
     <TextView
         android:id="@+id/AgencyUpdateText"
@@ -20,7 +16,7 @@
         android:textAlignment="center"
         android:textSize="24dp"
         android:textStyle="bold" />
-    // insert ID
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -38,7 +34,7 @@
             android:textSize="13dp"
             tools:ignore="TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
-    // Insert Person name"
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -55,9 +51,9 @@
             android:hint="Insert name"
             android:inputType="textPersonName"
             android:textSize="13dp"
-            tools:ignore="TouchTargetSizeCheck" /> />
+            tools:ignore="TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
-    // Insert rating sailor
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -75,16 +71,13 @@
             android:textSize="13dp"
             tools:ignore="TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
-    // Insert age
 
     <Button
         android:id="@+id/AgencyUpdateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Update"
-        android:backgroundTint="@color/lightblue"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="40dp"
-        />
-
+        android:backgroundTint="@color/lightblue"
+        android:text="Update" />
 </LinearLayout>

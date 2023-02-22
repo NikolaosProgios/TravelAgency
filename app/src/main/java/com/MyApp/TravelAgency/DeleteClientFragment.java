@@ -1,5 +1,6 @@
 
 package com.MyApp.TravelAgency;
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -21,7 +22,7 @@ public class DeleteClientFragment extends Fragment {
     EditText editText1;
     Button button1;
 
-    public DeleteClientFragment() {/* Required empty public constructor*/    }
+    public DeleteClientFragment() {/* Required empty public constructor*/ }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -30,36 +31,37 @@ public class DeleteClientFragment extends Fragment {
         editText1 = view.findViewById(R.id.ClientDeleteEditText1);
         button1 = view.findViewById(R.id.ClientDeleteButton);
         button1.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
+            @Override
+            public void onClick(View v) {
 
-            int var_ClientId = 0;
-            try {
-                var_ClientId = Integer.parseInt(editText1.getText().toString());
-            } catch (NumberFormatException ex) {
-                System.out.println("Could not parse + ex");
+                int var_ClientId = 0;
+                try {
+                    var_ClientId = Integer.parseInt(editText1.getText().toString());
+                } catch (NumberFormatException ex) {
+                    System.out.println("Could not parse + ex");
+                }
+                try {
+                    MainActivity.firestoreDB.
+                            collection("Clients").
+                            document("" + var_ClientId).delete().
+                            addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    Toast.makeText(getActivity(), "Client DELETE", Toast.LENGTH_SHORT).show();
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Toast.makeText(getActivity(), "Client delete FAILED", Toast.LENGTH_SHORT).show();
+                                }
+                            });
+                } catch (Exception e) {
+                    String message = e.getMessage();
+                    Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
+                }
+                editText1.setText("");
             }
-            try {
-                MainActivity.firestoreDB.
-                    collection("Clients").
-                    document("" + var_ClientId).delete().
-                    addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            Toast.makeText(getActivity(), "Client DELETE", Toast.LENGTH_SHORT).show();
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(getActivity(), "Client delete FAILED", Toast.LENGTH_SHORT).show();
-                        }
-                    });
-            } catch (Exception e) {
-                String message = e.getMessage();
-                Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
-            }
-            editText1.setText("");
-        }});
+        });
         return view;
     }
 }

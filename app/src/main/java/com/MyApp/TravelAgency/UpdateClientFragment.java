@@ -1,5 +1,6 @@
 
 package com.MyApp.TravelAgency;
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -18,9 +19,10 @@ import com.google.android.gms.tasks.Task;
 
 public class UpdateClientFragment extends Fragment {
 
-    Button button1;   EditText editText1, editText2, editText4, editText5, editText6, editText3;
+    Button button1;
+    EditText editText1, editText2, editText4, editText5, editText6, editText3;
 
-    public UpdateClientFragment() {/* Required empty public constructor*/    }
+    public UpdateClientFragment() {/* Required empty public constructor*/ }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -78,19 +80,19 @@ public class UpdateClientFragment extends Fragment {
                     client.setTrip_package(var_ClientPackageID);
 
                     MainActivity.firestoreDB.
-                    collection("Clients").
-                    document("" + var_ClientId).set(client).
-                    addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            Toast.makeText(getActivity(), "Client Update", Toast.LENGTH_SHORT).show();
-                        }
-                    }).addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(getActivity(), "Client update FAILED", Toast.LENGTH_SHORT).show();
-                        }
-                    });
+                            collection("Clients").
+                            document("" + var_ClientId).set(client).
+                            addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+                                    Toast.makeText(getActivity(), "Client Update", Toast.LENGTH_SHORT).show();
+                                }
+                            }).addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Toast.makeText(getActivity(), "Client update FAILED", Toast.LENGTH_SHORT).show();
+                                }
+                            });
 
                 } catch (Exception e) {
                     String message = e.getMessage();
@@ -102,7 +104,8 @@ public class UpdateClientFragment extends Fragment {
                 editText4.setText("");
                 editText5.setText("");
                 editText6.setText("");
-            }});
+            }
+        });
         return view;
     }
 }

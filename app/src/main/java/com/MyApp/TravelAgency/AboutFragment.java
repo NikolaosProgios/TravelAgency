@@ -1,4 +1,3 @@
-
 package com.MyApp.TravelAgency;
 
 import android.os.Bundle;
@@ -10,14 +9,12 @@ import androidx.fragment.app.Fragment;
 
 public class AboutFragment extends Fragment {
 
-    public AboutFragment(){ /*Required empty public constructor  */  }
+    public AboutFragment() { /*Required empty public constructor  */ }
 
     @Override
-    public View onCreateView (LayoutInflater inflater, ViewGroup container,
-                              Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_about, container, false);
-
-        return view;
+        return inflater.inflate(R.layout.fragment_about, container, false);
     }
 }

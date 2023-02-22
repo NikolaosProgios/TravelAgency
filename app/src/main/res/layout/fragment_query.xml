@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -20,12 +18,12 @@
         android:textColor="@color/black"
         android:textSize="12dp"
         android:textStyle="bold" />
+
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-    />
+        android:layout_gravity="center_horizontal" />
 
     <TextView
         android:id="@+id/txtquery"
@@ -37,21 +35,21 @@
         android:textAlignment="center"
         android:textColor="@color/deeppurple"
         android:textSize="12dp" />
+
     <Button
         android:id="@+id/queryrun"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="RUN"
-        android:textSize="18dp"
-        android:backgroundTint="@color/lightblue"
         android:layout_gravity="center_horizontal"
+        android:backgroundTint="@color/lightblue"
+        android:text="RUN"
         android:textAlignment="center"
-    />
+        android:textSize="18dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-    >
+        android:orientation="vertical">
 
         <ScrollView
             android:layout_width="match_parent"

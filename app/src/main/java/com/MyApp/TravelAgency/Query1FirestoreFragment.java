@@ -1,5 +1,5 @@
-
 package com.MyApp.TravelAgency;
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -22,7 +22,8 @@ public class Query1FirestoreFragment extends Fragment {
 
     TextView queryTextResult;
 
-    public Query1FirestoreFragment() {    }
+    public Query1FirestoreFragment() {
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -31,12 +32,12 @@ public class Query1FirestoreFragment extends Fragment {
         queryTextResult = view.findViewById(R.id.txtqueryresult);
         CollectionReference collectionReference = MainActivity.firestoreDB.
                 collection("Clients");
-        Query query = collectionReference.orderBy("born",Query.Direction.DESCENDING).limit(4);
+        Query query = collectionReference.orderBy("born", Query.Direction.DESCENDING).limit(4);
         query.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                String result="";
-                for (QueryDocumentSnapshot documentSnapshot:queryDocumentSnapshots) {
+                String result = "";
+                for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
                     Clients clients = documentSnapshot.toObject(Clients.class);
                     Integer id = clients.getId();
                     String name = clients.getName();

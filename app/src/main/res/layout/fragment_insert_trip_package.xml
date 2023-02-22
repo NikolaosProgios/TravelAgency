@@ -1,31 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width= "match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".InsertTripFragment">
 
-    //INSERT_TripPackage_Text
     <TextView
         android:id="@+id/TripPackageInsetText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textAlignment="center"
+        android:layout_margin="24dp"
         android:text="INSERT TRIP PACAKAGE"
-        android:textStyle="bold"
+        android:textAlignment="center"
         android:textSize="24dp"
-        android:layout_margin="24dp"/>
+        android:textStyle="bold" />
 
-
-
-    // Insert Trip Package ID
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/TripPackageInsetEditText1"
             android:layout_width="215dp"
@@ -33,14 +29,13 @@
             android:layout_marginStart="70dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="80dp"
-            android:hint="Insert trip package Id"
-            android:textSize="13dp"
-            android:ems="10"
-            android:inputType="number"
             android:backgroundTint="@color/white"
-            />
+            android:ems="10"
+            android:hint="Insert trip package Id"
+            android:inputType="number"
+            android:textSize="13dp" />
     </com.google.android.material.textfield.TextInputLayout>
-    // Insert Trip Package agency_id
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -52,14 +47,13 @@
             android:layout_marginStart="70dp"
             android:layout_marginTop="30dp"
             android:layout_marginEnd="80dp"
-            android:hint="Insert agency id"
-            android:textSize="13dp"
-            android:ems="10"
-            android:inputType="number"
             android:backgroundTint="@color/white"
-            /> />
+            android:ems="10"
+            android:hint="Insert agency id"
+            android:inputType="number"
+            android:textSize="13dp" />
     </com.google.android.material.textfield.TextInputLayout>
-    // Insert Trip Package trip_id
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -73,10 +67,10 @@
             android:layout_marginEnd="80dp"
             android:backgroundTint="@color/white"
             android:hint="Insert trip id"
-            android:textSize="13dp"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:textSize="13dp" />
     </com.google.android.material.textfield.TextInputLayout>
-    // Insert Trip Package date
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -93,7 +87,7 @@
             android:inputType="date"
             android:textSize="13dp" />
     </com.google.android.material.textfield.TextInputLayout>
-    // Insert Trip Package Price
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -107,8 +101,8 @@
             android:layout_marginEnd="80dp"
             android:backgroundTint="@color/white"
             android:hint="Insert price"
-            android:textSize="13dp"
-            android:inputType="number"/>
+            android:inputType="number"
+            android:textSize="13dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -119,6 +113,4 @@
         android:layout_marginTop="40dp"
         android:backgroundTint="@color/lightblue"
         android:text="Insert" />
-
-
 </LinearLayout>

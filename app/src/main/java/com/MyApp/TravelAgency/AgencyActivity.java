@@ -1,5 +1,6 @@
 
 package com.MyApp.TravelAgency;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -24,8 +25,11 @@ import com.google.android.material.navigation.NavigationView;
 
 public class AgencyActivity extends AppCompatActivity {
 
-    public static FragmentManager fragmentManager;    public static MyDB myAppDatabase;
-    Toolbar toolbar;    DrawerLayout drawerLayout;    NavigationView navigationView;
+    public static FragmentManager fragmentManager;
+    public static MyDB myAppDatabase;
+    Toolbar toolbar;
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
     private sharedPreferenceConfig sharedPreferenceConfig;
 
     @Override
@@ -33,7 +37,7 @@ public class AgencyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agency);
 
-        sharedPreferenceConfig=new sharedPreferenceConfig(getApplicationContext());
+        sharedPreferenceConfig = new sharedPreferenceConfig(getApplicationContext());
 
         //Navigation tool bar
         toolbar = findViewById(R.id.toolbar);
@@ -50,7 +54,7 @@ public class AgencyActivity extends AppCompatActivity {
                         drawerLayout.closeDrawers();
                         fragmentManager.beginTransaction().
                                 replace(R.id.fragment_container, new AgencyFragment()).addToBackStack(null).commit();
-                        createNotif("Profil","Here You Can Seen Your Info");
+                        createNotif("Profil", "Here You Can Seen Your Info");
                         return true;
                     case R.id.location:
                         menuItem.setChecked(true);
@@ -65,7 +69,7 @@ public class AgencyActivity extends AppCompatActivity {
                         drawerLayout.closeDrawers();
                         fragmentManager.beginTransaction().
                                 replace(R.id.fragment_container, new menuFragment()).addToBackStack(null).commit();
-                        createNotif("DataBase","Here You Can Edit Local Data Base");
+                        createNotif("DataBase", "Here You Can Edit Local Data Base");
                         return true;
                     case R.id.logout:
                         menuItem.setChecked(true);
@@ -73,7 +77,7 @@ public class AgencyActivity extends AppCompatActivity {
                         drawerLayout.closeDrawers();
                         sharedPreferenceConfig.writeLoginStatus(false);
                         startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                        createNotif("TNTeam","Just LogOut, Login Again");
+                        createNotif("TNTeam", "Just LogOut, Login Again");
                         finish();
                         return true;
                     case R.id.about:
@@ -87,7 +91,7 @@ public class AgencyActivity extends AppCompatActivity {
                         menuItem.setChecked(true);
                         //displayMessage("Close app");
                         drawerLayout.closeDrawers();
-                        createNotif("TNTeam","Just Finish All Activity, Have a nice day!");
+                        createNotif("TNTeam", "Just Finish All Activity, Have a nice day!");
                         finishAffinity();
                         return true;
                 }
@@ -96,7 +100,7 @@ public class AgencyActivity extends AppCompatActivity {
         });
         // Data Base
         fragmentManager = getSupportFragmentManager();
-        myAppDatabase = Room.databaseBuilder(getApplicationContext(), MyDB.class,"reservesBD").allowMainThreadQueries().build();
+        myAppDatabase = Room.databaseBuilder(getApplicationContext(), MyDB.class, "reservesBD").allowMainThreadQueries().build();
         if (findViewById(R.id.fragment_container) != null) {
             if (savedInstanceState != null) {
                 return;
@@ -106,12 +110,14 @@ public class AgencyActivity extends AppCompatActivity {
         }
     }
 
-    void displayMessage(String message) { Toast.makeText(this, message, Toast.LENGTH_LONG).show(); }
+    void displayMessage(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+    }
 
     private void createNotif(String Title, String Description) {
 
         String id = "my_apk";
-        NotificationManager manager = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
+        NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel channel = manager.getNotificationChannel(id);
             if (channel == null) {

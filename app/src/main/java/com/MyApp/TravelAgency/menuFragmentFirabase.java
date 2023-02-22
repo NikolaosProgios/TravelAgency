@@ -1,5 +1,5 @@
-
 package com.MyApp.TravelAgency;
+
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -11,10 +11,10 @@ import android.widget.Button;
 
 public class menuFragmentFirabase extends Fragment implements View.OnClickListener {
 
-    Button  ClientInsertBn, ClientDeleteBn, ClientUpdateBn,
-            Query1,Query2,Query3;
+    Button ClientInsertBn, ClientDeleteBn, ClientUpdateBn,
+            Query1, Query2, Query3;
 
-    public menuFragmentFirabase() {/* Required empty public constructor*/    }
+    public menuFragmentFirabase() {/* Required empty public constructor*/ }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -38,34 +38,35 @@ public class menuFragmentFirabase extends Fragment implements View.OnClickListen
 
         return view;
     }
-@Override
-public void onClick(View v) {
-        switch (v.getId()){
 
-        case R.id.ClientInsertBN:
-            AgencyActivity.fragmentManager.beginTransaction().
-            replace(R.id.fragment_container, new InsertClientFragment()).addToBackStack(null).commit();
-        break;
-        case R.id.ClientDeleteBN:
-            AgencyActivity.fragmentManager.beginTransaction().
-            replace(R.id.fragment_container, new DeleteClientFragment()).addToBackStack(null).commit();
-        break;
-        case R.id.ClientUpdateBN:
-            AgencyActivity.fragmentManager.beginTransaction().
-            replace(R.id.fragment_container, new UpdateClientFragment()).addToBackStack(null).commit();
-        break;
-        case R.id.QueryFirabaseBN1:
-            AgencyActivity.fragmentManager.beginTransaction().
-            replace(R.id.fragment_container, new Query1FirestoreFragment()).addToBackStack(null).commit();
-            break;
-        case R.id.QueryFirabaseBN2:
-            AgencyActivity.fragmentManager.beginTransaction().
-            replace(R.id.fragment_container, new Query2FirestoreFragment()).addToBackStack(null).commit();
-            break;
-        case R.id.QueryFirabaseBN3:
-            AgencyActivity.fragmentManager.beginTransaction().
-            replace(R.id.fragment_container, new Query3FirestoreFragment()).addToBackStack(null).commit();
-            break;
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+
+            case R.id.ClientInsertBN:
+                AgencyActivity.fragmentManager.beginTransaction().
+                        replace(R.id.fragment_container, new InsertClientFragment()).addToBackStack(null).commit();
+                break;
+            case R.id.ClientDeleteBN:
+                AgencyActivity.fragmentManager.beginTransaction().
+                        replace(R.id.fragment_container, new DeleteClientFragment()).addToBackStack(null).commit();
+                break;
+            case R.id.ClientUpdateBN:
+                AgencyActivity.fragmentManager.beginTransaction().
+                        replace(R.id.fragment_container, new UpdateClientFragment()).addToBackStack(null).commit();
+                break;
+            case R.id.QueryFirabaseBN1:
+                AgencyActivity.fragmentManager.beginTransaction().
+                        replace(R.id.fragment_container, new Query1FirestoreFragment()).addToBackStack(null).commit();
+                break;
+            case R.id.QueryFirabaseBN2:
+                AgencyActivity.fragmentManager.beginTransaction().
+                        replace(R.id.fragment_container, new Query2FirestoreFragment()).addToBackStack(null).commit();
+                break;
+            case R.id.QueryFirabaseBN3:
+                AgencyActivity.fragmentManager.beginTransaction().
+                        replace(R.id.fragment_container, new Query3FirestoreFragment()).addToBackStack(null).commit();
+                break;
         }
     }
 }

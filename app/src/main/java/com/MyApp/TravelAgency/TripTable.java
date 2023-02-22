@@ -1,8 +1,9 @@
 
 package com.MyApp.TravelAgency;
+
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
-import androidx.room. PrimaryKey;
+import androidx.room.PrimaryKey;
 
 @Entity(tableName = "trip_table")
 public class TripTable {
@@ -22,18 +23,43 @@ public class TripTable {
     @ColumnInfo(name = "trip_type")
     private String type;
 
-    public int getId() {        return id;    }
-    public void setId(int id) {        this.id = id;    }
+    public int getId() {
+        return id;
+    }
 
-    public String getCity() {        return city;    }
-    public void setCity(String city) {        this.city = city;    }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    public String getCountry() {        return country;    }
-    public void setCountry(String country) {       this.country = country;   }
+    public String getCity() {
+        return city;
+    }
 
-    public int getDays() {        return days;    }
-    public void setDays(int days) {        this.days = days;    }
+    public void setCity(String city) {
+        this.city = city;
+    }
 
-    public String getType() {        return type;    }
-    public void setType(String type) {        this.type = type;    }
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public int getDays() {
+        return days;
+    }
+
+    public void setDays(int days) {
+        this.days = days;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 }

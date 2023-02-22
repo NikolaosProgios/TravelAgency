@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width= "match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".DeleteTripFragment">
 
-    //INSERT trip textview
     <TextView
         android:id="@+id/TripDeleteText"
         android:layout_width="wrap_content"
@@ -20,7 +17,6 @@
         android:textSize="24dp"
         android:textStyle="bold" />
 
-    // Delete trip ID
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -42,9 +38,8 @@
         android:id="@+id/TripDeleteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DELETE"
-        android:backgroundTint="@color/lightblue"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="50dp"
-        />
+        android:backgroundTint="@color/lightblue"
+        android:text="DELETE" />
 </LinearLayout>

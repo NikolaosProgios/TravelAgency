@@ -1,5 +1,6 @@
 
 package com.MyApp.TravelAgency;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +12,8 @@ import android.widget.Toast;
 import androidx.fragment.app.Fragment;
 
 public class UpdateTripPackageFragment extends Fragment {
-    Button button; EditText editText1, editText2, editText3,editText4,editText5;
+    Button button;
+    EditText editText1, editText2, editText3, editText4, editText5;
 
     public UpdateTripPackageFragment() { /* Required empty public constructor*/}
 

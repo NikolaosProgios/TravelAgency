@@ -1,4 +1,3 @@
-
 package com.MyApp.TravelAgency;
 
 import android.os.Bundle;
@@ -11,8 +10,9 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
-public class InsertAgencyFragment extends Fragment{
-        EditText editText1, editText2, editText3;        Button insertagencybutton;
+public class InsertAgencyFragment extends Fragment {
+    EditText editText1, editText2, editText3;
+    Button insertagencybutton;
 
     public InsertAgencyFragment() { /* Required empty public constructor*/}
 

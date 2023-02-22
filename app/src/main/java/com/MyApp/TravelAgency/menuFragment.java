@@ -1,5 +1,6 @@
 
 package com.MyApp.TravelAgency;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,16 +11,16 @@ import androidx.fragment.app.Fragment;
 
 public class menuFragment extends Fragment implements View.OnClickListener {
 
-    Button  AgencyInsertBn, AgencyDeleteBn, AgencyUpdateBn,
-            TripInsertBn,TripDeleteBn, TripUpdateBn,
-            TripPackageInsetBn,TripPackageDeleteBn,TripPackageUpdateBn,
+    Button AgencyInsertBn, AgencyDeleteBn, AgencyUpdateBn,
+            TripInsertBn, TripDeleteBn, TripUpdateBn,
+            TripPackageInsetBn, TripPackageDeleteBn, TripPackageUpdateBn,
             AllQueriesBn;
 
-    public menuFragment(){ /*Required empty public constructor  */  }
+    public menuFragment() { /*Required empty public constructor  */ }
 
     @Override
-    public View onCreateView (LayoutInflater inflater, ViewGroup container,
-                                  Bundle savedInstanceState){
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_menu, container, false);
 
@@ -52,7 +53,7 @@ public class menuFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.AgencyInsertBN:
                 AgencyActivity.fragmentManager.beginTransaction().
                         replace(R.id.fragment_container, new InsertAgencyFragment()).addToBackStack(null).commit();

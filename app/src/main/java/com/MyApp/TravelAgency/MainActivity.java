@@ -1,4 +1,5 @@
 package com.MyApp.TravelAgency;
+
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -27,21 +28,25 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static MyDB myAppDatabase;    public static FragmentManager fragmentManager;
+    public static MyDB myAppDatabase;
+    public static FragmentManager fragmentManager;
     public static FirebaseFirestore firestoreDB;
-    Toolbar toolbar;    DrawerLayout drawerLayout;    NavigationView navigationView;
-    private sharedPreferenceConfig sharedPreferencesConf;    TextInputEditText Agency_Login_Id, Agency_Login_Name;
+    Toolbar toolbar;
+    DrawerLayout drawerLayout;
+    NavigationView navigationView;
+    private sharedPreferenceConfig sharedPreferencesConf;
+    TextInputEditText Agency_Login_Id, Agency_Login_Name;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        fragmentManager=getSupportFragmentManager();
+        fragmentManager = getSupportFragmentManager();
         /*  Local DataBase */
         myAppDatabase = Room.databaseBuilder(getApplicationContext(),
-            MyDB.class,"local_DataBase").
-            fallbackToDestructiveMigration().allowMainThreadQueries().build();
+                        MyDB.class, "local_DataBase").
+                fallbackToDestructiveMigration().allowMainThreadQueries().build();
 
         /*  Remote DataBase  */
         firestoreDB = FirebaseFirestore.getInstance();
@@ -60,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                         menuItem.setChecked(true);
                         displayMessage("Close app");
                         drawerLayout.closeDrawers();
-                        createNotif("TNTeam","Just Finish All Activity");
+                        createNotif("TNTeam", "Just Finish All Activity");
                         finishAffinity();
                         return true;
                 }
@@ -77,28 +82,37 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
     }
+
     public void loginAgency(View view) {
         String varId = Agency_Login_Id.getText().toString();
         String varName = Agency_Login_Name.getText().toString();
-        if (varId.equals(getResources().getString(R.string.agency_id)) && varName.equals(getResources().getString(R.string.agency_name))){
-            createNotif("TNTeam","Login success");
+        if (varId.equals(getResources().getString(R.string.agency_id)) && varName.equals(getResources().getString(R.string.agency_name))) {
+            createNotif("TNTeam", "Login success");
             startActivity(new Intent(this, AgencyActivity.class));
             sharedPreferencesConf.writeLoginStatus(true);
             finish();
-        }else{
+        } else {
             Toast.makeText(this,
                     "Loging Failed! Check input data and Try again ", Toast.LENGTH_LONG).show();
             Agency_Login_Id.setText("");
             Agency_Login_Name.setText("");
+        }
     }
-}
-    void displayMessage(String message){Toast.makeText(this, message, Toast.LENGTH_LONG).show();}
+
+    void displayMessage(String message) {
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+    }
+
     @Override
-    protected void onStart(){super.onStart();Toast.makeText(getApplicationContext(), "Welcome !", Toast.LENGTH_LONG).show();}
+    protected void onStart() {
+        super.onStart();
+        Toast.makeText(getApplicationContext(), "Welcome !", Toast.LENGTH_LONG).show();
+    }
+
     private void createNotif(String Title, String Description) {
 
         String id = "my_apk";
-        NotificationManager manager = (NotificationManager)getSystemService(NOTIFICATION_SERVICE);
+        NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             NotificationChannel channel = manager.getNotificationChannel(id);
             if (channel == null) {

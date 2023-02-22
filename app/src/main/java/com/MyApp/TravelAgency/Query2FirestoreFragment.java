@@ -1,5 +1,5 @@
-
 package com.MyApp.TravelAgency;
+
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,12 +15,14 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
+
 public class Query2FirestoreFragment extends Fragment {
 
     TextView queryTextResult;
     DocumentReference documentReference;
 
-    public Query2FirestoreFragment() {    }
+    public Query2FirestoreFragment() {
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -33,26 +35,26 @@ public class Query2FirestoreFragment extends Fragment {
                 document("4001");
 
         documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-        @Override
-        public void onSuccess(DocumentSnapshot documentSnapshot) {
-            if (documentSnapshot.exists()) {
-                Clients clients= documentSnapshot.toObject(Clients.class);
-                Integer id  = clients.getId();
-                String name = clients.getName();
-                Integer born = clients.getBorn();
-                String phone = clients.getPhone();
-                String hotel = clients.getHotel();
-                Integer package_id=clients.getTrip_package();
-                queryTextResult.setText(
-                        " id: " +id +
-                        "\n name: " + name +
-                        "\n born: " + born + "\n phone: " + phone +
-                        "\n hotel: " + hotel +
-                        "\n package_id: " + package_id+"\n");
-            } else {
-                Toast.makeText(getActivity(), "document does not exist.", Toast.LENGTH_LONG).show();
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+                if (documentSnapshot.exists()) {
+                    Clients clients = documentSnapshot.toObject(Clients.class);
+                    Integer id = clients.getId();
+                    String name = clients.getName();
+                    Integer born = clients.getBorn();
+                    String phone = clients.getPhone();
+                    String hotel = clients.getHotel();
+                    Integer package_id = clients.getTrip_package();
+                    queryTextResult.setText(
+                            " id: " + id +
+                                    "\n name: " + name +
+                                    "\n born: " + born + "\n phone: " + phone +
+                                    "\n hotel: " + hotel +
+                                    "\n package_id: " + package_id + "\n");
+                } else {
+                    Toast.makeText(getActivity(), "document does not exist.", Toast.LENGTH_LONG).show();
+                }
             }
-        }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {

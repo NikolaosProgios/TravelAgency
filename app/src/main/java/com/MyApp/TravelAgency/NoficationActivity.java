@@ -1,4 +1,3 @@
-
 package com.MyApp.TravelAgency;
 
 import androidx.appcompat.app.AppCompatActivity;

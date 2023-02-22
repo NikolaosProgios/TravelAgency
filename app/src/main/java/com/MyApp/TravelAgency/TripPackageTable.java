@@ -1,7 +1,10 @@
 
 package com.MyApp.TravelAgency;
+
 import androidx.room.ColumnInfo;
-import androidx.room.Entity;import androidx.room.ForeignKey;import androidx.room.PrimaryKey;
+import androidx.room.Entity;
+import androidx.room.ForeignKey;
+import androidx.room.PrimaryKey;
 
 @Entity(tableName = "package_table",
         foreignKeys = {
@@ -14,7 +17,7 @@ import androidx.room.Entity;import androidx.room.ForeignKey;import androidx.room
                         parentColumns = "trip_id",
                         childColumns = "trip_code",
                         onDelete = ForeignKey.CASCADE,
-                        onUpdate = ForeignKey.CASCADE)  } )
+                        onUpdate = ForeignKey.CASCADE)})
 public class TripPackageTable {
 
     @PrimaryKey
@@ -33,18 +36,43 @@ public class TripPackageTable {
     @ColumnInfo(name = "package_price")
     private double price;
 
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id;}
+    public int getId() {
+        return id;
+    }
 
-    public int getAgencyCode() {return agencyCode;}
-    public void setAgencyCode(int agencyCode) {this.agencyCode = agencyCode;        }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    public int getTripCode() { return tripCode;}
-    public void setTripCode(int tripCode) { this.tripCode = tripCode; }
+    public int getAgencyCode() {
+        return agencyCode;
+    }
 
-    public String getDeparture() { return departure;}
-    public void setDeparture(String departure){this.departure = departure;        }
+    public void setAgencyCode(int agencyCode) {
+        this.agencyCode = agencyCode;
+    }
 
-    public double getPrice() { return price;}
-    public void setPrice(double price) { this.price = price;}
+    public int getTripCode() {
+        return tripCode;
+    }
+
+    public void setTripCode(int tripCode) {
+        this.tripCode = tripCode;
+    }
+
+    public String getDeparture() {
+        return departure;
+    }
+
+    public void setDeparture(String departure) {
+        this.departure = departure;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
 }

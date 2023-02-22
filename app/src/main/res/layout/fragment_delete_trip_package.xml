@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width= "match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".DeleteTripPackageFragment">
-
-    //INSERT SAILOR textview
 
     <TextView
         android:id="@+id/TripPackageDeleteText"
@@ -16,12 +12,12 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_margin="24dp"
+        android:inputType="number"
         android:text="DELETE TRIP PACKAGE"
         android:textAlignment="center"
         android:textSize="24dp"
-        android:inputType="number"
         android:textStyle="bold" />
-    // Insert ID sailor delete
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -38,16 +34,13 @@
             android:inputType="number"
             android:textSize="13dp" />
     </com.google.android.material.textfield.TextInputLayout>
-    // Insert id boat delte
-    // Insert date reservation
 
     <Button
         android:id="@+id/TripPackageDeleteButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="DELETE"
-        android:backgroundTint="@color/lightblue"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="40dp"
-        />
+        android:backgroundTint="@color/lightblue"
+        android:text="DELETE" />
 </LinearLayout>
