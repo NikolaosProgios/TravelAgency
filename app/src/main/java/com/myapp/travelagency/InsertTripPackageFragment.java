@@ -29,60 +29,52 @@ public class InsertTripPackageFragment extends Fragment {
         editText5 = view.findViewById(R.id.TripPackageInsetEditText5);
 
         insert_trip_Bn = view.findViewById(R.id.TripPackageInsertButton);
-        insert_trip_Bn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //1i metavliti
-                int Var_trip_package_Id = 0;
-                try {
-                    Var_trip_package_Id = Integer.parseInt(editText1.getText().toString());
-                } catch (NumberFormatException ex) {
-                    System.out.println("Could not parse + ex");
-                }
-                //2i metavliti
-                int Var_agency_id = 0;
-                try {
-                    Var_agency_id = Integer.parseInt(editText2.getText().toString());
-                } catch (NumberFormatException ex) {
-                    System.out.println("Could not parse + ex");
-                }
-                //3i metavliti
-                int Var_trip_id = 0;
-                try {
-                    Var_trip_id = Integer.parseInt(editText3.getText().toString());
-                } catch (NumberFormatException ex) {
-                    System.out.println("Could not parse + ex");
-                }
-                //4i metavliti
-                String Var_date_deperature = editText4.getText().toString();
-                //5i metavliti
-                int Var_trip_price = 0;
-                try {
-                    Var_trip_price = Integer.parseInt(editText5.getText().toString());
-                } catch (NumberFormatException ex) {
-                    System.out.println("Could not parse + ex");
-                }
-
-                try {
-                    TripPackageTable tripPackage = new TripPackageTable();
-                    tripPackage.setId(Var_trip_package_Id);
-                    tripPackage.setAgencyCode(Var_agency_id);
-                    tripPackage.setTripCode(Var_trip_id);
-                    tripPackage.setDeparture(Var_date_deperature);
-                    tripPackage.setPrice(Var_trip_price);
-
-                    MainActivity.myAppDatabase.myDao().insertTripPackage(tripPackage);
-                    Toast.makeText(getActivity(), "Insert Trip Package Complete !", Toast.LENGTH_LONG).show();
-                } catch (Exception e) {
-                    String message = e.getMessage();
-                    Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
-                }
-                editText1.setText("");
-                editText2.setText("");
-                editText3.setText("");
-                editText4.setText("");
-                editText5.setText("");
+        insert_trip_Bn.setOnClickListener(v -> {
+            int tripPackageId = 0;
+            try {
+                tripPackageId = Integer.parseInt(editText1.getText().toString());
+            } catch (NumberFormatException ex) {
+                System.out.println("Could not parse + ex");
             }
+            int agencyId = 0;
+            try {
+                agencyId = Integer.parseInt(editText2.getText().toString());
+            } catch (NumberFormatException ex) {
+                System.out.println("Could not parse + ex");
+            }
+            int tripId = 0;
+            try {
+                tripId = Integer.parseInt(editText3.getText().toString());
+            } catch (NumberFormatException ex) {
+                System.out.println("Could not parse + ex");
+            }
+            String dateDeparture = editText4.getText().toString();
+            int tripPrice = 0;
+            try {
+                tripPrice = Integer.parseInt(editText5.getText().toString());
+            } catch (NumberFormatException ex) {
+                System.out.println("Could not parse + ex");
+            }
+
+            try {
+                TripPackageTable tripPackage = new TripPackageTable();
+                tripPackage.setId(tripPackageId);
+                tripPackage.setAgencyCode(agencyId);
+                tripPackage.setTripCode(tripId);
+                tripPackage.setDeparture(dateDeparture);
+                tripPackage.setPrice(tripPrice);
+
+                MainActivity.myAppDatabase.myDao().insertTripPackage(tripPackage);
+                Toast.makeText(getActivity(), "Insert Trip Package Complete !", Toast.LENGTH_LONG).show();
+            } catch (Exception e) {
+                String message = e.getMessage();
+                Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
+            }
+            editText1.setText("");
+            editText2.setText("");
+            editText3.setText("");
+            editText4.setText("");
+            editText5.setText("");
         });
         return view;
     }

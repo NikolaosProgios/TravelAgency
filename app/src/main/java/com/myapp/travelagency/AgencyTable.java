@@ -2,7 +2,7 @@
 package com.myapp.travelagency;
 
 import androidx.room.ColumnInfo;
-import androidx.room.Entity; //gia na oristei i class afti os pinakas
+import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "agency_table")

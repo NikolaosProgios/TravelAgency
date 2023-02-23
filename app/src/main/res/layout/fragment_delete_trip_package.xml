@@ -41,6 +41,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="40dp"
-        android:backgroundTint="@color/lightblue"
+        android:backgroundTint="@color/light_blue"
         android:text="DELETE" />
 </LinearLayout>

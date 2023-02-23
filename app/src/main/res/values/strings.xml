@@ -1,17 +1,15 @@
 <resources>
-
-    <string name="app_name">TravelAgency</string>
+    <string name="app_name">Travel Agency</string>
 
     <!-- Login -->
     <string name="agency_id">1007</string>
     <string name="agency_name">Sean Connery</string>
     <string name="agency_address">IHU, Alexander Campus</string>
-    <string name="login_perference">
-        TNTeam.loginaoosharedPreferences_loginPrederence</string>
-    <string name="login_status">TNTeam.loginaoosharedPreferences_loginStatus</string>
+    <string name="login_preference">
+        TNTeam.shareholdingPreferences_loginPreference</string>
+    <string name="login_status">TNTeam.shareholdingPreferences_loginStatus</string>
 
     <string-array name="queries_array">
-
         <item> Query 1 </item>
         <item> Query 2 </item>
         <item> Query 3 </item>
@@ -23,7 +21,6 @@
         <item> Query 9 </item>
         <item> Query 10</item>
         <item> Query 11</item>
-
     </string-array>
 
     <string-array name="queries_description_array">
@@ -39,8 +36,6 @@
         <item> 9. Εμφανίστε τον κωδικο πακέτου εκδρομής,την πόλη εκδρομής, οπου περιλαμβάνουν Χριστούγεννα και πρωτοχρονιά.</item>
         <item> 10.Εμφανίστε τα ονόματα πρακτορίων που βρήσκοκνται στο κέντρο. </item>
         <item> 11.Εμφανίστε τα ονόματα των πρακτωρίων και την τιμη των ημερίσιων εκδρομών που υπάρχουν για Νάυπλιο το 15Αυγουστο 2022.</item>
-
     </string-array>
     <string name="hello_blank_fragment">Hello :) </string>
-
 </resources>

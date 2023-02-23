@@ -14,7 +14,7 @@ public class DeleteAgencyFragment extends Fragment {
     EditText editText;
     Button button;
 
-    public DeleteAgencyFragment() { /* Required empty public constructor*/}
+    public DeleteAgencyFragment() { /*Required empty public constructor*/}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -23,24 +23,20 @@ public class DeleteAgencyFragment extends Fragment {
 
         editText = view.findViewById(R.id.AgencyDeleteEditText1);
         button = view.findViewById(R.id.AgencyDeleteButton);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //1i metavliti
-                int Var_id = 0;
-                try {
-                    Var_id = Integer.parseInt(editText.getText().toString());
-                } catch (NumberFormatException ex) {
-                    System.out.println("Could not parse + ex");
-                }
-                AgencyTable agency = new AgencyTable();
-                agency.setId(Var_id);
-
-                MainActivity.myAppDatabase.myDao().deleteAgency(agency);
-                Toast.makeText(getActivity(), "Delete Agency Complete !", Toast.LENGTH_LONG).show();
-
-                editText.setText("");
+        button.setOnClickListener(v -> {
+            int varId = 0;
+            try {
+                varId = Integer.parseInt(editText.getText().toString());
+            } catch (NumberFormatException ex) {
+                System.out.println("Could not parse + ex");
             }
+            AgencyTable agency = new AgencyTable();
+            agency.setId(varId);
+
+            MainActivity.myAppDatabase.myDao().deleteAgency(agency);
+            Toast.makeText(getActivity(), "Delete Agency Complete !", Toast.LENGTH_LONG).show();
+
+            editText.setText("");
         });
         return view;
     }

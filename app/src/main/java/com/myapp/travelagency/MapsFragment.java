@@ -1,15 +1,12 @@
-
 package com.myapp.travelagency;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -19,41 +16,37 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsFragment extends Fragment {
 
-    private OnMapReadyCallback callback = new OnMapReadyCallback() {
+    private final OnMapReadyCallback callback = googleMap -> {
 
-        @Override
-        public void onMapReady(GoogleMap googleMap) {
+        LatLng electraPalace = new LatLng(40.633159, 22.941070);
+        googleMap.addMarker(new MarkerOptions().
+                position(electraPalace).title("Electra Palace"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(electraPalace));
 
-            LatLng ElectraPalace = new LatLng(40.633159, 22.941070);
-            googleMap.addMarker(new MarkerOptions().
-                    position(ElectraPalace).title("Electra Palace"));
-            googleMap.moveCamera(CameraUpdateFactory.newLatLng(ElectraPalace));
+        LatLng pariosPalace = new LatLng(37.057115, 25.118629);
+        googleMap.addMarker(new MarkerOptions().
+                position(pariosPalace).title("Parios Palace"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(pariosPalace));
 
-            LatLng PariosPalace = new LatLng(37.057115, 25.118629);
-            googleMap.addMarker(new MarkerOptions().
-                    position(PariosPalace).title("Parios Palace"));
-            googleMap.moveCamera(CameraUpdateFactory.newLatLng(PariosPalace));
+        LatLng nafplioHotel = new LatLng(37.545025, 22.822525);
+        googleMap.addMarker(new MarkerOptions().
+                position(nafplioHotel).title("Nafplio Hotel "));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(nafplioHotel));
 
-            LatLng NafpioHotel = new LatLng(37.545025, 22.822525);
-            googleMap.addMarker(new MarkerOptions().
-                    position(NafpioHotel).title("Nafplio Hotel "));
-            googleMap.moveCamera(CameraUpdateFactory.newLatLng(NafpioHotel));
+        LatLng makedoniaPalace = new LatLng(40.618103, 22.952432);
+        googleMap.addMarker(new MarkerOptions().
+                position(makedoniaPalace).title("Makedonia Palace "));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(makedoniaPalace));
 
-            LatLng MakedoniaPalace = new LatLng(40.618103, 22.952432);
-            googleMap.addMarker(new MarkerOptions().
-                    position(MakedoniaPalace).title("Makedonia Palace "));
-            googleMap.moveCamera(CameraUpdateFactory.newLatLng(MakedoniaPalace));
+        LatLng nafplioPalace2 = new LatLng(37.566068, 22.796979);
+        googleMap.addMarker(new MarkerOptions().
+                position(nafplioPalace2).title("Nafplio Palace "));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(nafplioPalace2));
 
-            LatLng NafplioPalace = new LatLng(37.566068, 22.796979);
-            googleMap.addMarker(new MarkerOptions().
-                    position(NafplioPalace).title("Nafplio Palace "));
-            googleMap.moveCamera(CameraUpdateFactory.newLatLng(NafplioPalace));
-
-            LatLng CorfuDreams = new LatLng(39.590718, 19.897450);
-            googleMap.addMarker(new MarkerOptions().
-                    position(CorfuDreams).title("Corfu dreams"));
-            googleMap.moveCamera(CameraUpdateFactory.newLatLng(CorfuDreams));
-        }
+        LatLng corfuDreams = new LatLng(39.590718, 19.897450);
+        googleMap.addMarker(new MarkerOptions().
+                position(corfuDreams).title("Corfu dreams"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(corfuDreams));
     };
 
     @Nullable

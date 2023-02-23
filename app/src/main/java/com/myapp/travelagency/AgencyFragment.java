@@ -12,10 +12,10 @@ import androidx.fragment.app.Fragment;
 
 public class AgencyFragment extends Fragment implements View.OnClickListener {
 
-    TextView aid, aname, aaddress;
-    Button EditTablebn;
+    TextView agencyId, agencyName, agencyAddress;
+    Button editTableBtn;
 
-    public AgencyFragment() { /*Required empty public constructor  */ }
+    public AgencyFragment() { /*Required empty public constructor*/ }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -24,17 +24,17 @@ public class AgencyFragment extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.fragment_agency,
                 container, false);
 
-        aid = view.findViewById(R.id.textViewIdFill);
-        aid.setText(getResources().getString(R.string.agency_id));
+        agencyId = view.findViewById(R.id.textViewIdFill);
+        agencyId.setText(getResources().getString(R.string.agency_id));
 
-        aname = view.findViewById(R.id.textViewNameFill);
-        aname.setText(getResources().getString(R.string.agency_name));
+        agencyName = view.findViewById(R.id.textViewNameFill);
+        agencyName.setText(getResources().getString(R.string.agency_name));
 
-        aaddress = view.findViewById(R.id.textViewAddressFill);
-        aaddress.setText(getResources().getString(R.string.agency_address));
+        agencyAddress = view.findViewById(R.id.textViewAddressFill);
+        agencyAddress.setText(getResources().getString(R.string.agency_address));
 
-        EditTablebn = view.findViewById(R.id.FireBaseBN);
-        EditTablebn.setOnClickListener(this);
+        editTableBtn = view.findViewById(R.id.FireBaseBN);
+        editTableBtn.setOnClickListener(this);
 
         return view;
     }
@@ -42,9 +42,9 @@ public class AgencyFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.FireBaseBN: // for firebase
+            case R.id.FireBaseBN:
                 AgencyActivity.fragmentManager.beginTransaction().
-                        replace(R.id.fragment_container, new menuFragmentFirabase()).addToBackStack(null).commit();
+                        replace(R.id.fragment_container, new MenuFragmentFirabase()).addToBackStack(null).commit();
                 break;
         }
     }

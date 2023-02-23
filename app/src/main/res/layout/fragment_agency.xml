@@ -15,8 +15,7 @@
 
         <include
             layout="@layout/toolbar_layout"
-            android:backgroundTint="@color/lightblue"
-            ></include>
+            android:backgroundTint="@color/light_blue" />
 
         <FrameLayout
             android:id="@+id/fragment_container"
@@ -90,7 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="FIREBASE"
-                android:backgroundTint="@color/lightblue"
+                android:backgroundTint="@color/light_blue"
                 android:layout_marginStart="120dp"
                 android:layout_marginTop="220dp"
                 app:icon="@drawable/cloud_white" />

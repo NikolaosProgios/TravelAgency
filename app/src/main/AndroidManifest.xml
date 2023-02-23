@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TravelAgency">
         <activity
-            android:name="com.myapp.travelagency.NoficationActivity"
+            android:name="com.myapp.travelagency.NotificationActivity"
             android:exported="false" />
 
         <meta-data

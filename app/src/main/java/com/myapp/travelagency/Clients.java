@@ -6,7 +6,7 @@ public class Clients {
     private int born;
     private String phone;
     private String hotel;
-    private int trip_package;
+    private int tripPackage;
 
     public int getId() {
         return id;
@@ -48,11 +48,11 @@ public class Clients {
         this.hotel = hotel;
     }
 
-    public int getTrip_package() {
-        return trip_package;
+    public int getTripPackage() {
+        return tripPackage;
     }
 
-    public void setTrip_package(int trip_package) {
-        this.trip_package = trip_package;
+    public void setTripPackage(int tripPackage) {
+        this.tripPackage = tripPackage;
     }
 }

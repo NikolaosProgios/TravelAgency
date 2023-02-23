@@ -1,10 +1,9 @@
 package com.myapp.travelagency;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class NoficationActivity extends AppCompatActivity {
+public class NotificationActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -3,8 +3,6 @@
     <application>
         <activity
             android:name="com.myapp.travelagency.Print"
-            android:exported="false"
-
-            />
+            android:exported="false" />
     </application>
 </manifest>

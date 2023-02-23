@@ -42,7 +42,7 @@ public class Query3FirestoreFragment extends Fragment {
                     Integer born = clients.getBorn();
                     String phone = clients.getPhone();
                     String hotel = clients.getHotel();
-                    Integer package_id = clients.getTrip_package();
+                    Integer package_id = clients.getTripPackage();
                     result += " id: " + id +
                             "\n name: " + name +
                             "\n born: " + born + "\n phone: " + phone +

@@ -9,12 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-public class menuFragmentFirabase extends Fragment implements View.OnClickListener {
+public class MenuFragmentFirabase extends Fragment implements View.OnClickListener {
 
-    Button ClientInsertBn, ClientDeleteBn, ClientUpdateBn,
-            Query1, Query2, Query3;
+    Button clientInsertBtn, clientDeleteBtn, clientUpdateBtn,
+            query1, query2, query3;
 
-    public menuFragmentFirabase() {/* Required empty public constructor*/ }
+    public MenuFragmentFirabase() {/* Required empty public constructor*/ }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -22,19 +22,19 @@ public class menuFragmentFirabase extends Fragment implements View.OnClickListen
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_menu_firabase, container, false);
 
-        ClientInsertBn = view.findViewById(R.id.ClientInsertBN);
-        ClientInsertBn.setOnClickListener(this);
-        ClientDeleteBn = view.findViewById(R.id.ClientDeleteBN);
-        ClientDeleteBn.setOnClickListener(this);
-        ClientUpdateBn = view.findViewById(R.id.ClientUpdateBN);
-        ClientUpdateBn.setOnClickListener(this);
+        clientInsertBtn = view.findViewById(R.id.ClientInsertBN);
+        clientInsertBtn.setOnClickListener(this);
+        clientDeleteBtn = view.findViewById(R.id.ClientDeleteBN);
+        clientDeleteBtn.setOnClickListener(this);
+        clientUpdateBtn = view.findViewById(R.id.ClientUpdateBN);
+        clientUpdateBtn.setOnClickListener(this);
 
-        Query1 = view.findViewById(R.id.QueryFirabaseBN1);
-        Query1.setOnClickListener(this);
-        Query2 = view.findViewById(R.id.QueryFirabaseBN2);
-        Query2.setOnClickListener(this);
-        Query3 = view.findViewById(R.id.QueryFirabaseBN3);
-        Query3.setOnClickListener(this);
+        query1 = view.findViewById(R.id.QueryFirabaseBN1);
+        query1.setOnClickListener(this);
+        query2 = view.findViewById(R.id.QueryFirabaseBN2);
+        query2.setOnClickListener(this);
+        query3 = view.findViewById(R.id.QueryFirabaseBN3);
+        query3.setOnClickListener(this);
 
         return view;
     }
@@ -42,7 +42,6 @@ public class menuFragmentFirabase extends Fragment implements View.OnClickListen
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-
             case R.id.ClientInsertBN:
                 AgencyActivity.fragmentManager.beginTransaction().
                         replace(R.id.fragment_container, new InsertClientFragment()).addToBackStack(null).commit();

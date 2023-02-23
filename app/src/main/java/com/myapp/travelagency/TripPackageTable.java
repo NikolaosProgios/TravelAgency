@@ -1,4 +1,3 @@
-
 package com.myapp.travelagency;
 
 import androidx.room.ColumnInfo;

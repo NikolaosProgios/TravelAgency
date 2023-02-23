@@ -25,28 +25,25 @@ public class DeleteTripPackageFragment extends Fragment {
         editText1 = view.findViewById(R.id.TripPackageEditText1);
 
         button = view.findViewById(R.id.TripPackageDeleteButton);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //1i metavliti
-                int Var_TripPackageID = 0;
-                try {
-                    Var_TripPackageID = Integer.parseInt(editText1.getText().toString());
-                } catch (NumberFormatException ex) {
-                    System.out.println("Could not parse + ex");
-                }
-
-                try {
-                    TripPackageTable tripPackage = new TripPackageTable();
-                    tripPackage.setId(Var_TripPackageID);
-                    MainActivity.myAppDatabase.myDao().deleteTripPackage(tripPackage);
-                    Toast.makeText(getActivity(), "Delete Trip Package Complete !", Toast.LENGTH_LONG).show();
-                } catch (Exception e) {
-                    String message = e.getMessage();
-                    Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
-                }
-                editText1.setText("");
+        button.setOnClickListener(v -> {
+            //1i metavliti
+            int tripPackageID = 0;
+            try {
+                tripPackageID = Integer.parseInt(editText1.getText().toString());
+            } catch (NumberFormatException ex) {
+                System.out.println("Could not parse + ex");
             }
+
+            try {
+                TripPackageTable tripPackage = new TripPackageTable();
+                tripPackage.setId(tripPackageID);
+                MainActivity.myAppDatabase.myDao().deleteTripPackage(tripPackage);
+                Toast.makeText(getActivity(), "Delete Trip Package Complete !", Toast.LENGTH_LONG).show();
+            } catch (Exception e) {
+                String message = e.getMessage();
+                Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
+            }
+            editText1.setText("");
         });
         return view;
     }

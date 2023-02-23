@@ -33,7 +33,7 @@
         android:layout_margin="12dp"
         android:text="Query Description"
         android:textAlignment="center"
-        android:textColor="@color/deeppurple"
+        android:textColor="@color/deep_purple"
         android:textSize="12dp" />
 
     <Button
@@ -41,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:backgroundTint="@color/lightblue"
+        android:backgroundTint="@color/light_blue"
         android:text="RUN"
         android:textAlignment="center"
         android:textSize="18dp" />

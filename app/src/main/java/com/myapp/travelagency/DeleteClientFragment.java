@@ -30,37 +30,24 @@ public class DeleteClientFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_delete_client, container, false);
         editText1 = view.findViewById(R.id.ClientDeleteEditText1);
         button1 = view.findViewById(R.id.ClientDeleteButton);
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        button1.setOnClickListener(v -> {
 
-                int var_ClientId = 0;
-                try {
-                    var_ClientId = Integer.parseInt(editText1.getText().toString());
-                } catch (NumberFormatException ex) {
-                    System.out.println("Could not parse + ex");
-                }
-                try {
-                    MainActivity.firestoreDB.
-                            collection("Clients").
-                            document("" + var_ClientId).delete().
-                            addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    Toast.makeText(getActivity(), "Client DELETE", Toast.LENGTH_SHORT).show();
-                                }
-                            }).addOnFailureListener(new OnFailureListener() {
-                                @Override
-                                public void onFailure(@NonNull Exception e) {
-                                    Toast.makeText(getActivity(), "Client delete FAILED", Toast.LENGTH_SHORT).show();
-                                }
-                            });
-                } catch (Exception e) {
-                    String message = e.getMessage();
-                    Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
-                }
-                editText1.setText("");
+            int clientId = 0;
+            try {
+                clientId = Integer.parseInt(editText1.getText().toString());
+            } catch (NumberFormatException ex) {
+                System.out.println("Could not parse + ex");
             }
+            try {
+                MainActivity.firestoreDB.
+                        collection("Clients").
+                        document("" + clientId).delete().
+                        addOnCompleteListener(task -> Toast.makeText(getActivity(), "Client DELETE", Toast.LENGTH_SHORT).show()).addOnFailureListener(e -> Toast.makeText(getActivity(), "Client delete FAILED", Toast.LENGTH_SHORT).show());
+            } catch (Exception e) {
+                String message = e.getMessage();
+                Toast.makeText(getActivity(), message, Toast.LENGTH_LONG).show();
+            }
+            editText1.setText("");
         });
         return view;
     }

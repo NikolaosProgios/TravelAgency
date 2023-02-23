@@ -40,3 +40,15 @@ V
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
+b
+2app/src/release/java/com/example/tnteam/Print.java,7\8\78af3928c712e3c637011d23506d6cae27e0afbf
+r
+Bmylibrary/src/test/java/com/example/mylibrary/ExampleUnitTest.java,3\4\349e51e6617543a12919ca0b6667b1d3a7ee209f
+Å
+Qmylibrary/src/androidTest/java/com/example/mylibrary/ExampleInstrumentedTest.java,5\1\51cc87b42e5a9766961a320b7b885ae63d38c53d
+<
+build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
+|
+Lapp/src/androidTest/java/com/myapp/travelagency/ExampleInstrumentedTest.java,3\c\3cb1c6b87b1ad26428cf921b48e9c5afea7b7dd3
+m
+=app/src/test/java/com/myapp/travelagency/ExampleUnitTest.java,e\8\e8e919ab1e581ca67cdd44008a2b7a5dfabac2fa

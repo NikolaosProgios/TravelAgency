@@ -1,4 +1,3 @@
-
 package com.myapp.travelagency;
 
 import android.os.Bundle;
@@ -6,17 +5,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-
 import androidx.fragment.app.Fragment;
 
-public class menuFragment extends Fragment implements View.OnClickListener {
+public class MenuFragment extends Fragment implements View.OnClickListener {
 
-    Button AgencyInsertBn, AgencyDeleteBn, AgencyUpdateBn,
-            TripInsertBn, TripDeleteBn, TripUpdateBn,
-            TripPackageInsetBn, TripPackageDeleteBn, TripPackageUpdateBn,
-            AllQueriesBn;
+    Button agencyInsertBtn, agencyDeleteBtn, agencyUpdateBtn,
+            tripInsertBtn, tripDeleteBtn, tripUpdateBtn,
+            tripPackageInsetBtn, tripPackageDeleteBtn, tripPackageUpdateBtn,
+            allQueriesBtn;
 
-    public menuFragment() { /*Required empty public constructor  */ }
+    public MenuFragment() { /*Required empty public constructor  */ }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -24,29 +22,29 @@ public class menuFragment extends Fragment implements View.OnClickListener {
 
         View view = inflater.inflate(R.layout.fragment_menu, container, false);
 
-        AgencyInsertBn = view.findViewById(R.id.AgencyInsertBN);
-        AgencyInsertBn.setOnClickListener(this);
-        AgencyDeleteBn = view.findViewById(R.id.AgencyDeleteBN);
-        AgencyDeleteBn.setOnClickListener(this);
-        AgencyUpdateBn = view.findViewById(R.id.AgencyUpdateBN);
-        AgencyUpdateBn.setOnClickListener(this);
+        agencyInsertBtn = view.findViewById(R.id.AgencyInsertBN);
+        agencyInsertBtn.setOnClickListener(this);
+        agencyDeleteBtn = view.findViewById(R.id.AgencyDeleteBN);
+        agencyDeleteBtn.setOnClickListener(this);
+        agencyUpdateBtn = view.findViewById(R.id.AgencyUpdateBN);
+        agencyUpdateBtn.setOnClickListener(this);
 
-        TripInsertBn = view.findViewById(R.id.TripInsertBN);
-        TripInsertBn.setOnClickListener(this);
-        TripDeleteBn = view.findViewById(R.id.TripDeleteBN);
-        TripDeleteBn.setOnClickListener(this);
-        TripUpdateBn = view.findViewById(R.id.TripUpdateBN);
-        TripUpdateBn.setOnClickListener(this);
+        tripInsertBtn = view.findViewById(R.id.TripInsertBN);
+        tripInsertBtn.setOnClickListener(this);
+        tripDeleteBtn = view.findViewById(R.id.TripDeleteBN);
+        tripDeleteBtn.setOnClickListener(this);
+        tripUpdateBtn = view.findViewById(R.id.TripUpdateBN);
+        tripUpdateBtn.setOnClickListener(this);
 
-        TripPackageInsetBn = view.findViewById(R.id.TripPackageInsetBN);
-        TripPackageInsetBn.setOnClickListener(this);
-        TripPackageDeleteBn = view.findViewById(R.id.TripPackageDeleteBN);
-        TripPackageDeleteBn.setOnClickListener(this);
-        TripPackageUpdateBn = view.findViewById(R.id.TripPackageUpdateBN);
-        TripPackageUpdateBn.setOnClickListener(this);
+        tripPackageInsetBtn = view.findViewById(R.id.TripPackageInsetBN);
+        tripPackageInsetBtn.setOnClickListener(this);
+        tripPackageDeleteBtn = view.findViewById(R.id.TripPackageDeleteBN);
+        tripPackageDeleteBtn.setOnClickListener(this);
+        tripPackageUpdateBtn = view.findViewById(R.id.TripPackageUpdateBN);
+        tripPackageUpdateBtn.setOnClickListener(this);
 
-        AllQueriesBn = view.findViewById(R.id.AllQueriesBN);
-        AllQueriesBn.setOnClickListener(this);
+        allQueriesBtn = view.findViewById(R.id.AllQueriesBN);
+        allQueriesBtn.setOnClickListener(this);
 
         return view;
     }
